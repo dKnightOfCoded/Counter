@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_3" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -14,23 +14,15 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Значение счётчика" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhX-QC-hnQ">
-                                <rect key="frame" x="33" y="277" width="329" height="48"/>
-                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="39"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VK-TX-ygp">
-                                <rect key="frame" x="171" y="340" width="50.666666666666657" height="114.66666666666669"/>
-                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="94"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0G1-Qw-YhN">
-                                <rect key="frame" x="33" y="687" width="149" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0G1-Qw-YhN">
+                                <rect key="frame" x="37" y="691" width="148" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="Xga-VT-JA7"/>
+                                    <constraint firstAttribute="height" constant="64" id="Yak-VM-Xlh"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="large">
                                     <imageReference key="image" image="minus" catalog="system" symbolScale="large"/>
@@ -43,9 +35,12 @@
                                     <action selector="pressMinusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zZy-PV-mt8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKk-GF-HrP">
-                                <rect key="frame" x="210" y="687" width="149" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKk-GF-HrP">
+                                <rect key="frame" x="217" y="691" width="148" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="148" id="CqW-lB-QcS"/>
+                                    <constraint firstAttribute="height" constant="64" id="NLD-D2-7qC"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="large">
                                     <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
@@ -58,9 +53,17 @@
                                     <action selector="pressPlusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JZl-Iu-tdV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHM-0H-dj0">
-                                <rect key="frame" x="144" y="592" width="105" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VK-TX-ygp">
+                                <rect key="frame" x="175.66666666666666" y="308" width="50.666666666666657" height="114.66666666666669"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="94"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHM-0H-dj0">
+                                <rect key="frame" x="149" y="599.66666666666663" width="104" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="104" id="iXh-lS-Ts2"/>
+                                    <constraint firstAttribute="height" constant="64" id="mE6-Th-iLO"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrowshape.down.fill" catalog="system" cornerStyle="large">
                                     <backgroundConfiguration key="background">
@@ -72,20 +75,40 @@
                                     <action selector="pressNullButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ZB-6U-3N5"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="История изменений" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FdL-Fj-ua1">
-                                <rect key="frame" x="34" y="64" width="326" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="История изменений" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FdL-Fj-ua1">
+                                <rect key="frame" x="38.666666666666657" y="98" width="325" height="48"/>
+                                <color key="backgroundColor" red="1" green="0.70487154640000005" blue="0.078552216640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="8QK-Md-OM0"/>
+                                    <constraint firstAttribute="width" constant="325" id="cAo-V5-Qks"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Значение счётчика" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhX-QC-hnQ">
+                                <rect key="frame" x="37" y="213" width="328.33333333333331" height="47"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.70487154637100602" blue="0.078552216638167471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6VK-TX-ygp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bWK-jI-ORA"/>
-                            <constraint firstItem="dhX-QC-hnQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gEn-fX-XM1"/>
+                            <constraint firstItem="FdL-Fj-ua1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="98" id="5fi-kV-q9X"/>
+                            <constraint firstItem="0G1-Qw-YhN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="6Ha-K8-ZaE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BKk-GF-HrP" secondAttribute="trailing" constant="37" id="8dc-lw-w4y"/>
+                            <constraint firstItem="BKk-GF-HrP" firstAttribute="leading" secondItem="0G1-Qw-YhN" secondAttribute="trailing" constant="32" id="8xq-VL-E17"/>
+                            <constraint firstItem="0G1-Qw-YhN" firstAttribute="top" secondItem="JHM-0H-dj0" secondAttribute="bottom" constant="27.333333333333371" id="Cle-hK-s7H"/>
+                            <constraint firstItem="6VK-TX-ygp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IfJ-IZ-AVX"/>
+                            <constraint firstItem="6VK-TX-ygp" firstAttribute="top" secondItem="dhX-QC-hnQ" secondAttribute="bottom" constant="48" id="LkV-vh-iwi"/>
+                            <constraint firstItem="dhX-QC-hnQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="R89-jZ-Boz"/>
+                            <constraint firstItem="JHM-0H-dj0" firstAttribute="top" secondItem="6VK-TX-ygp" secondAttribute="bottom" constant="177" id="Y5r-oZ-z9b"/>
+                            <constraint firstItem="JHM-0H-dj0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ccA-fy-hZa"/>
+                            <constraint firstItem="BKk-GF-HrP" firstAttribute="top" secondItem="JHM-0H-dj0" secondAttribute="bottom" constant="27.333333333333371" id="ftH-hw-xOe"/>
+                            <constraint firstItem="dhX-QC-hnQ" firstAttribute="top" secondItem="FdL-Fj-ua1" secondAttribute="bottom" constant="67" id="pd1-Et-VNQ"/>
+                            <constraint firstItem="FdL-Fj-ua1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rBo-1R-udF"/>
                         </constraints>
                     </view>
                     <connections>
@@ -98,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="67.938931297709928" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="67.164179104477611" y="-28.146453089244851"/>
         </scene>
     </scenes>
     <resources>
@@ -107,9 +130,6 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
