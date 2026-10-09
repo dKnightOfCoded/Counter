@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Counter View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CounterViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="pressMinusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zZy-PV-mt8"/>
+                                    <action selector="didTapMinusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zZy-PV-mt8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKk-GF-HrP">
@@ -50,7 +50,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="pressPlusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JZl-Iu-tdV"/>
+                                    <action selector="didTapPlusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JZl-Iu-tdV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VK-TX-ygp">
@@ -72,7 +72,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="pressNullButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ZB-6U-3N5"/>
+                                    <action selector="didTapResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ZB-6U-3N5"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="История изменений" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FdL-Fj-ua1">
@@ -112,11 +112,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="counterLabel" destination="6VK-TX-ygp" id="6YY-HR-Dyr"/>
                         <outlet property="historyTextView" destination="FdL-Fj-ua1" id="G0M-Ft-gWr"/>
                         <outlet property="minusButton" destination="0G1-Qw-YhN" id="1R0-6P-q14"/>
-                        <outlet property="nullButton" destination="JHM-0H-dj0" id="FVu-sr-aTb"/>
                         <outlet property="plusButton" destination="BKk-GF-HrP" id="VJ4-W6-hIj"/>
-                        <outlet property="valueCounter" destination="6VK-TX-ygp" id="6YY-HR-Dyr"/>
+                        <outlet property="resetButton" destination="JHM-0H-dj0" id="FVu-sr-aTb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
